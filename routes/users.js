@@ -14,7 +14,7 @@ router.post("/",
     // Validate input
     [
         check("name", "Please add a name").notEmpty(),
-        check("email", "Please input an email               address").isEmail(),
+        check("email", "Please input an email address").isEmail(),
         check("password", "Please enter a password within 6 to 20 characters").isLength({ min: 6, max: 20 })
     ], async (req, res) => {
         // Check for errors
